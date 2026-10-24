@@ -1,0 +1,28 @@
+Data description
+Production experiment from (Ch. 2 of Katz 2010 and Katz 2012 JPhon)
+
+Nonce-words produced in carrier sentences; 4 repetitions of each word per subject; 6 subjects.
+
+Columns:
+Sub: speaker who produced the token
+Item: rough IPA transcription of target
+Cond: whether token is part of the onset-testing series (on) or the coda-testing one (co)
+Vowel: the vowel in the word in rough IPA (note that 'i' was lax)
+Len: length of the word in segments
+Lex: logical indicating whether the pronunciation corresponds to an existing English word
+LogF: log frequency in CELEX of homophonous word if Lex == 1
+Block: which of four repetitions of the token (0-3)
+Trial: ordinal trial at which the word was produced, out of 360 target words
+d1-d4: duration measurements for consonantal portions of the word on the *test* side of the vowel (preceding for Cond == on; following for Cond == co). These are in the order of increasing proximity to the vowel steady-state. So d4 is the transition between the vowel and adjacent test consonant, d3 is the steady state of the adjacent test consonant, d2 in the majority of cases is the non-adjacent test consonant if present, and d1 is the non-adjacent test consonant only in /#sn/ sequences.
+Vdur: steady-state vowel duration
+d5: duration of 'dummy' consonant /d/ on non-test side of vowel
+
+There are several complications with these 'd' variables. First, the transition between two consonants was generally negligible and so is not measured here, *except* for /#sn/ sequences, where some tokens had intervals of near-silence between [s] and [n]. Those silences appear in d2 (0 if absent), and d1 is the measurement of [s]. Second, vowel-initial words (Len == 2 and Cond == on) were given separate 'd' variables for each of the qualitatively different types of phonetic realization discussed in the papers (indicated by 'cq' variables below).
+
+flap: logical indicating whether the dummy consonant was perceived as flapped/tapped
+Cdur: sum of d1-d4, indicating total duration of consonant-associated segments
+c(1-3)q: factor coding the rough phonetic quality of one or more onsets of a vowel-initial word. The major categories: ggl1 = glottalized portion with formant movement; ggl2 = glottalized portion with relatively steady formants; cl = glottal closure (silence); gl = glide, non-glottalized period of formant movement; igp = intermittent glottal pulsing, intermediate between glottal stopping and glottalized vowel/glide
+
+
+  
+
